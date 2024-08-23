@@ -2,18 +2,22 @@
 
 ## Overview
 
-This project is a Python-based search engine web crawler that integrates advanced information retrieval models, including BM25, TF-IDF, and language models (LM) for document retrieval and ranking. It leverages Elasticsearch for indexing and querying, and utilizes pseudo-relevance feedback to enhance search results. Additionally, it features training and testing phases for different models and explores various smoothing techniques.
+This project is a Python-based search engine web crawler that integrates advanced information retrieval models, including BM25, TF-IDF,
+and language models (LM) for document retrieval and ranking. It leverages Elasticsearch for indexing and querying, and utilizes pseudo-relevance 
+feedback to enhance search results. Additionally, it features training and testing phases for different models and explores various smoothing techniques.
 
 ## Key Components
 
 ### 1. Web Crawling and Data Parsing
-- **`data_parser.py`**: A script that handles the extraction and parsing of data from crawled web pages. It processes HTML content, removes stop words, and prepares the data for indexing.
+- **`data_parser.py`**: A script that handles the extraction and parsing of data from crawled web pages. It processes HTML content, removes stop words, 
+- and prepares the data for indexing.
 - **`parser.py`**: Another parsing utility that might be focused on handling different data formats or additional preprocessing steps.
 
 ### 2. Indexing and Retrieval with Elasticsearch
 - **`es.py`**: The main script for interacting with Elasticsearch, setting up connections, and handling basic indexing and querying operations.
 - **`es_index_data.py`**: Responsible for indexing parsed documents into Elasticsearch. It structures the data into a format suitable for Elasticsearch indexing.
-- **`es_retreival_models.py`**: Implements various retrieval models on top of Elasticsearch, such as BM25 and TF-IDF. It customizes Elasticsearch queries to apply these models and retrieves ranked lists of documents.
+- **`es_retreival_models.py`**: Implements various retrieval models on top of Elasticsearch, such as BM25 and TF-IDF. It customizes Elasticsearch queries to 
+- apply these models and retrieves ranked lists of documents.
 
 ### 3. Information Retrieval Models
 - **BM25**:
@@ -37,7 +41,7 @@ This project is a Python-based search engine web crawler that integrates advance
 - **`results.xlsx`**: A spreadsheet containing detailed results and comparisons across different models and experiments.
 
 ### 6. Additional Scripts and Utilities
-- **`main.py`**: Likely the main entry point for running the project, coordinating the crawling, indexing, and retrieval processes.
+- **`main.py`**: The main entry point for running the project, coordinating the crawling, indexing, and retrieval processes.
 - **`stemming_ind.py`**: Handles stemming of words in the documents, possibly using a predefined list of stemming rules (`stem-classes.lst`).
 - **`stoplist.txt`**: A list of stop words to be removed during the parsing process.
 - **`term_vectors.json`**: A JSON file that might store term vectors for documents, aiding in retrieval and ranking.
